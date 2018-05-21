@@ -52,3 +52,14 @@ Template-driven forms are mostly HTML, easy to use but not so suitable for compl
 - Wait validation until typing stops
 - Different validation for different situations
 - Immutable data structures
+
+## Reactive forms
+formBuilder?
+
+For input elements that do **not** need to be tracked **not** use FormControl
+
+Use FormArrays to work with FormGroup's or FormControl's as an array
+
+We initialize the FormGroup in `ngOnInit()` and not in the constructor to ensure it's available before building the Form Model
+
+We can pass validation rules in the FormControl constructor e. g. `sendCatalog: new FormControl(/* validation rules */)`
