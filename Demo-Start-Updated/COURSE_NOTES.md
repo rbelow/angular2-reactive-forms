@@ -39,7 +39,7 @@ Reactive (ReactiveFormsModule - Form Model is **not** created for us):
 - formGroupName
 - formArrayName
 
-## Notes
+## Template-driven forms
 Reactive forms have **not** two-way data binding
 
 The FormGroup object has an `controls` object for each FormControl
@@ -54,7 +54,7 @@ Template-driven forms are mostly HTML, easy to use but not so suitable for compl
 - Immutable data structures
 
 ## Reactive forms
-formBuilder?
+FormBuilder? https://angular.io/api/forms/FormBuilder
 
 For input elements that do **not** need to be tracked **not** use FormControl
 
@@ -64,4 +64,9 @@ We initialize the FormGroup in `ngOnInit()` and not in the constructor to ensure
 
 We can pass validation rules in the FormControl constructor e. g. `sendCatalog: new FormControl(/* validation rules */)`
 
+Access Form Model properties with:
+- `<formGroupName>.controls.<formControlName>.valid`
+- `<formGroupName>.get('<formControlName>').valid` shorter syntax is perfect for nested FormGroup's. If the HTML element uses double quotes use for the get argument single quotes!
+
+## Notes
 An Angular Module is like a box with components and directives. They can use only what is "imported" into the box

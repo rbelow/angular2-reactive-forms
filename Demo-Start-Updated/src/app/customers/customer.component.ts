@@ -4,7 +4,7 @@ import { Customer } from './customer';
 
 @Component({
     selector: 'my-signup',
-    templateUrl: './app/customers/template-driven/customer.component.html'
+    templateUrl: './app/customers/customer.component.html'
 })
 export class CustomerComponent implements OnInit {
     customerForm: FormGroup;
