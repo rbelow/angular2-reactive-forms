@@ -38,3 +38,17 @@ Reactive (ReactiveFormsModule - Form Model is **not** created for us):
 - formControlName
 - formGroupName
 - formArrayName
+
+## Notes
+Reactive forms have **not** two-way data binding
+
+The FormGroup object has an `controls` object for each FormControl
+
+The `FormGroup.value` object has the value of each FormControl
+
+Template-driven forms are mostly HTML, easy to use but not so suitable for complex scenarios like:
+- Dinamically add input elements
+- Watch what the user types
+- Wait validation until typing stops
+- Different validation for different situations
+- Immutable data structures
