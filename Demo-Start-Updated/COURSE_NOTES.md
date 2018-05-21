@@ -63,3 +63,5 @@ Use FormArrays to work with FormGroup's or FormControl's as an array
 We initialize the FormGroup in `ngOnInit()` and not in the constructor to ensure it's available before building the Form Model
 
 We can pass validation rules in the FormControl constructor e. g. `sendCatalog: new FormControl(/* validation rules */)`
+
+An Angular Module is like a box with components and directives. They can use only what is "imported" into the box
