@@ -54,7 +54,11 @@ Template-driven forms are mostly HTML, easy to use but not so suitable for compl
 - Immutable data structures
 
 ## Reactive forms
-FormBuilder? https://angular.io/api/forms/FormBuilder
+FormBuilder: https://angular.io/api/forms/FormBuilder
+
+setValue and patchValue:
+- https://angular.io/api/forms/FormControl#setvalue
+- https://angular.io/api/forms/FormControl#patchvalue
 
 For input elements that do **not** need to be tracked **not** use FormControl
 
@@ -70,3 +74,15 @@ Access Form Model properties with:
 
 ## Notes
 An Angular Module is like a box with components and directives. They can use only what is "imported" into the box
+
+## setValue and patchValue
+Set data with FormGroup.setValue({yourFormControlName: value})
+
+**setValue requires to set the value for every FormControl in the Form Model**
+
+With patchValue you can set individual FormControl values
+
+Use setValue to set all FormControl's and patchValue to set a subset of the FormControl's
+
+## FormControl
+FormBuilder is like a factory that creates FormGroup's and FormControl's for us
