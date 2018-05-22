@@ -72,9 +72,6 @@ Access Form Model properties with:
 - `<formGroupName>.controls.<formControlName>.valid`
 - `<formGroupName>.get('<formControlName>').valid` shorter syntax is perfect for nested FormGroup's. If the HTML element uses double quotes use for the get argument single quotes!
 
-## Notes
-An Angular Module is like a box with components and directives. They can use only what is "imported" into the box
-
 ## setValue and patchValue
 Set data with FormGroup.setValue({yourFormControlName: value})
 
@@ -86,3 +83,8 @@ Use setValue to set all FormControl's and patchValue to set a subset of the Form
 
 ## FormControl
 FormBuilder is like a factory that creates FormGroup's and FormControl's for us
+
+## Notes
+An Angular Module is like a box with components and directives. They can use only what is "imported" into the box
+
+**In a real app the form may be declared in a feature module**

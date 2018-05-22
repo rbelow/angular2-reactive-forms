@@ -11,14 +11,14 @@ export class CustomerComponent implements OnInit {
     customerForm: FormGroup;
     // we use a class and not an interface because we want to create
     // a new instance of the class for the new customer information
-    customer: Customer= new Customer(); // data model defines the data passed from/to our back-end server. Data model !== Form model
+    customer: Customer = new Customer(); // data model defines the data passed from/to our back-end server. Data model !== Form model
 
     constructor(private fb: FormBuilder) { }
 
     ngOnInit(): void {
         // FormBuilder allows us to create directly FormControl's and FormGroup's without explicitly defining them
         // e. g. `this.fb.group({senCatalog: {value: true, disabled: false}})`
-        // e. g. `this.fb.group([{senCatalog: {value: true, disabled: false}, validation]})`        
+        // e. g. `this.fb.group([{senCatalog: {value: true, disabled: false}, /* validation rules */]})`        
         this.customerForm = this.fb.group({
             firstName: '',
             // lastName: {value: 'n/a', disabled: true},
